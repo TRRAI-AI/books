@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: boekwaarde-backend
+    env: node
+    plan: free
+    rootDir: backend
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: EBAY_BEARER
+        sync: false
+    autoDeploy: true
